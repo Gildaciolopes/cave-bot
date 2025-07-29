@@ -1,7 +1,7 @@
-// src/index.ts
 import { Client, IntentsBitField, Interaction } from "discord.js";
 import * as dotenv from "dotenv";
 import { banCommand } from "./commands/ban";
+import { unbanCommand } from "./commands/unban";
 
 dotenv.config();
 
@@ -18,8 +18,10 @@ client.once("ready", () => {
 client.on("interactionCreate", async (interaction: Interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === banCommand.data.name) {
+  if (interaction.commandName === "ban") {
     await banCommand.execute(interaction);
+  } else if (interaction.commandName === "unban") {
+    await unbanCommand.execute(interaction);
   }
   // ... outros comandos
 });
