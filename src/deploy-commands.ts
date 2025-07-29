@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 import { banCommand } from "./commands/ban";
 import { unbanCommand } from "./commands/unban";
 import { muteCommand } from "./commands/mute";
+import { unmuteCommand } from "./commands/unmute";
 
 // Carrega variáveis de ambiente do arquivo .env
 dotenv.config();
@@ -18,6 +19,7 @@ const commands = [
   banCommand.data.toJSON(),
   unbanCommand.data.toJSON(),
   muteCommand.data.toJSON(),
+  unmuteCommand.data.toJSON(),
   // Adicione aqui outros comandos, por exemplo:
   // outroCommand.data.toJSON(),
 ];

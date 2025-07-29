@@ -81,7 +81,7 @@ export const banCommand = {
     // aplica o ban
     await member.ban({
       deleteMessageSeconds: 60 * 60 * 24, // apaga 1 dia de mensagens (86400 segundos)
-      reason: `${interaction.user.tag}: ${razao} | ${duracaoLabel}`, // sempre string
+      reason: `Banido por: ${interaction.user.tag} | Motivo: ${razao} | ${duracaoLabel}`, // sempre string
     });
 
     // envia embed de log

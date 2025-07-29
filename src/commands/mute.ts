@@ -76,7 +76,7 @@ export const muteCommand = {
     // aplica o timeout
     await member.timeout(
       duracaoMS,
-      `Mutado por: ${interaction.user.tag} | Motivo: ${motivo}`
+      `Mutado por: ${interaction.user.tag} | Motivo: ${motivo} | ${horas} hora(s)`
     );
 
     // envia embed de log

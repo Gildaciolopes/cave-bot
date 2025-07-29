@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import { banCommand } from "./commands/ban";
 import { unbanCommand } from "./commands/unban";
 import { muteCommand } from "./commands/mute";
+import { unmuteCommand } from "./commands/unmute";
 
 dotenv.config();
 
@@ -28,6 +29,8 @@ client.on("interactionCreate", async (interaction: Interaction) => {
     await unbanCommand.execute(interaction);
   } else if (interaction.commandName === muteCommand.data.name) {
     await muteCommand.execute(interaction);
+  } else if (interaction.commandName === unmuteCommand.data.name) {
+    await unmuteCommand.execute(interaction);
   }
   // ... outros comandos
 });

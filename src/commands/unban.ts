@@ -74,7 +74,7 @@ export const unbanCommand = {
     // realiza o unban
     await interaction.guild.members.unban(
       userId,
-      `$Foi desbanido por: ${interaction.user.tag} | Motivo: ${motivo}`
+      `Desbanido por: ${interaction.user.tag} | Motivo: ${motivo}`
     );
 
     // envia o embed de log
