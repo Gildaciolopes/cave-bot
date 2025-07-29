@@ -89,12 +89,12 @@ export const unbanCommand = {
         .addFields(
           {
             name: "Usuário Desbanido",
-            value: `${banInfo.user.tag}`,
+            value: `${banInfo.user}`,
             inline: true,
           },
           {
             name: "Desbanido por",
-            value: `${interaction.user.tag}`,
+            value: `${interaction.user}`,
             inline: true,
           },
           { name: "Motivo", value: motivo, inline: false }

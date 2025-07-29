@@ -3,6 +3,7 @@ import { Routes } from "discord-api-types/v10";
 import * as dotenv from "dotenv";
 import { banCommand } from "./commands/ban";
 import { unbanCommand } from "./commands/unban";
+import { muteCommand } from "./commands/mute";
 
 // Carrega variáveis de ambiente do arquivo .env
 dotenv.config();
@@ -16,6 +17,7 @@ const GUILD_ID = process.env.GUILD_ID!;
 const commands = [
   banCommand.data.toJSON(),
   unbanCommand.data.toJSON(),
+  muteCommand.data.toJSON(),
   // Adicione aqui outros comandos, por exemplo:
   // outroCommand.data.toJSON(),
 ];
